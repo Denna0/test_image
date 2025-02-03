@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the screen */
+    padding: 30px;
+    overflow-x: hidden;
+    background-image: url(/BgImage/Untitled\ design.png);
+}
+
+/* Center the entire container */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Grid Layout for Images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 40px; /* Space between images */
+    justify-content: center;
+    align-items: center;
+    max-width: 650px; /* Limit max width */
+    width: 100%;
+}
+
+/* On smaller screens, switch to 1 column */
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 column */
+    }
+}
+
+/* Centering the images */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
